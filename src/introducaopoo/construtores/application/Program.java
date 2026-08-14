@@ -3,6 +3,7 @@ package introducaopoo.construtores.application;
 import introducaopoo.construtores.application.entities.Product2;
 import introducaopoo.entities.Product;
 
+import java.sql.SQLOutput;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -18,12 +19,13 @@ public class Program {
         String name = sc.nextLine();
         System.out.print("Price: ");
         double price = sc.nextDouble();
-        System.out.print("Quantity in stock: ");
-        int quantity = sc.nextInt();
-        Product2 product = new Product2(name, price, quantity);
+        Product2 product = new Product2(name, price);
+
+        product.setName("Computer");
 
         System.out.println();
-        System.out.println("Product data:" + product);
+        System.out.println("Product data: " + product);
+        System.out.println("Updated name: " + product.getName());
 
         System.out.println();
         System.out.print("Enter the number of products to be added in stock: ");
