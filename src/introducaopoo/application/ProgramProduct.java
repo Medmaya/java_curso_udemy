@@ -11,7 +11,8 @@ public class ProgramProduct {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Product product = new Product();
+        Product product;
+        product = new Product();
 
         System.out.println("Enter product data: ");
         System.out.print("Name: ");
